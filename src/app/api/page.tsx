@@ -72,6 +72,8 @@ export default function useApi() {
                                 console.log("POST data:", response);
                                 setTitle("");
                                 setDescription("");
+                                alert("Book added successfully!");
+
                             } catch (error) {
                                 console.error("Error posting book:", error);
                             }
@@ -86,9 +88,31 @@ export default function useApi() {
                     <Button
                         onclick={async () => {
                             try {
+                                const response = Api().put({ id, title, description });
+                                console.log("updated :", response);
+                                setTitle("");
+                                setDescription("");
+                                setId("");
+                                alert("Book updated successfully!");
+                            } catch (error) {
+                                console.error("Error updating book:", error);
+                            }
+                        }}
+                        width={120}
+                        height={40}
+                        text="Edit Data"
+                        color="yellow"
+                        margin={8}
+                        padding={12}
+                    />
+                    <Button
+                        onclick={async () => {
+                            try {
                                 const response = Api().del(id);
                                 console.log("DELETEd :", response);
                                 setId("");
+                                alert("Book deleted successfully!");
+
                             } catch (error) {
                                 console.error("Error deleting book:", error);
                             }
