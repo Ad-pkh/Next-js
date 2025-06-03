@@ -1,9 +1,8 @@
 "use client"
-import Button from "../component/buttton/page";
+import Button from "../../component/button";
 import { useState } from "react";
-import Api from "./hook";
-import Card from "../component/card/page";
-
+import Api from "./service/service";
+import Card from "../../component/card"
 
 {/* create api from json server book store {id tittle description} and also make page in client to access api */ }
 export default function useApi() {
@@ -27,7 +26,6 @@ export default function useApi() {
     };
     return (
         <>
-
             <div className="m-4 flex flex-col items-center">
                 <h1>Interact with API</h1>
                 <div className="flex gap-2">

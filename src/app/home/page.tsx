@@ -1,6 +1,6 @@
 'use client';
 
-import Button from "../component/buttton/page";
+import Button from "../../component/button";
 
 
 function home() {
@@ -24,6 +24,3 @@ function home() {
 export default home;
 
 
-
-// button ma color hunuparyo(success,danger...) ,varient hnuparyo ,onclick option hun paryo etc
-// eutai component ma different props use garera change hunu paryo
